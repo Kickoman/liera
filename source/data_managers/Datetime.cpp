@@ -4,10 +4,10 @@
 
 Datetime::Datetime()
 {
-    m_time = time(0) - rand() % 10 * 24 * 60 * 60;
+    m_time = time(0) - rand() % 10 * 24 * 60 * 60; // for debug use only
 }
 
-Datetime::Datetime(int code)
+Datetime::Datetime(int code) // for everyday use
 {
     m_time = time(0);
 }

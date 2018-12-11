@@ -16,8 +16,13 @@ Contract::~Contract()
 std::wstring Contract::render() const
 {
     std::wstring result;
-    result = L"ID:\t\t" + std::to_wstring(m_id) + L"\n";
-    result += L"Сумма страхования: " + m_insured.str() + L"\n";
+    result  = L"ID:                 " + std::to_wstring(m_id) + L"\n";
+    result += L"Имя подписанта:     " + m_name + L"\n";
+    result += L"Сумма страхования:  " + m_insured.str() + L"\n";
+    result += L"Дата:               " + m_datetime.localstr() + L"\n";
+    result += L"Тарифная ставка:    " + std::to_wstring(m_tariff_rate) + L"\n";
+    result += L"ID офиса:           " + std::to_wstring(m_office_id) + L"\n";
+    result += L"Тип страхования:    " + std::to_wstring(m_insurance_type) + L"\n";
     return result;
 }
 

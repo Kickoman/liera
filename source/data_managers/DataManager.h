@@ -59,17 +59,14 @@ public:
             name = new wchar_t[name_len];
 
             filer.read((char*)name, name_len * sizeof(wchar_t));
-
-            //std::string narrowName(name);
-            //std::wstring wideName(narrowName.begin(), narrowName.end());
-            std::wstring wideName(name);
+            //std::wstring wideName(name);
 
             filer.read((char*)&tariff_rate, sizeof(int));
             filer.read((char*)&office_id, sizeof(int));
             filer.read((char*)&insurance_type, sizeof(int));
             filer.read((char*)&pages_number, sizeof(int));
 
-            Contract c(id, datetime, insured, wideName, tariff_rate, office_id, insurance_type, pages_number);
+            Contract c(id, datetime, insured, name, tariff_rate, office_id, insurance_type, pages_number);
             m_data.push_back(c);
         }
 
