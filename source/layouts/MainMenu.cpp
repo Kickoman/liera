@@ -1,17 +1,17 @@
-#include "MainMenu.h"
+﻿#include "MainMenu.h"
 #include "UIController.h"
 #include "InsuranceKeeper.h"
 
 
 MainMenu::MainMenu(InsuranceKeeper* ma):master_app(ma)
 {
-    m_title = new PlainText("Welcome here!\n");
+    m_title = new PlainText(L"Добро пожаловать!\n");
 
     m_menu = new PlainMenu();
-    m_menu->insertPosition(MenuPosition("List all contracts"));
-    m_menu->insertPosition(MenuPosition("Search"));
-    m_menu->insertPosition(MenuPosition("Add contract"));
-    m_menu->insertPosition(MenuPosition("Quit"));
+    m_menu->insertPosition(MenuPosition(L"Просмотреть все контракты"));
+    m_menu->insertPosition(MenuPosition(L"Поиск"));
+    m_menu->insertPosition(MenuPosition(L"Новый контракт"));
+    m_menu->insertPosition(MenuPosition(L"Выйти"));
 
     addObject(m_title);
     addObject(m_menu, true);

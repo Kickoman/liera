@@ -13,9 +13,9 @@ Object::~Object()
 }
 
 
-std::string Object::render()
+std::wstring Object::render()
 {
-    return "";
+    return L"";
 }
 
 void Object::interact(int code)

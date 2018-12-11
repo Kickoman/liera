@@ -1,4 +1,4 @@
-#include "Contract.h"
+﻿#include "Contract.h"
 
 Contract::Contract() :m_id(0)
 {
@@ -13,11 +13,11 @@ Contract::~Contract()
 }
 
 
-std::string Contract::render() const
+std::wstring Contract::render() const
 {
-    std::string result;
-    result = "ID: " + std::to_string(m_id) + "\n";
-    result += "Insured: " + m_insured.str() + "\n";
+    std::wstring result;
+    result = L"ID:\t\t" + std::to_wstring(m_id) + L"\n";
+    result += L"Сумма страхования: " + m_insured.str() + L"\n";
     return result;
 }
 
@@ -38,7 +38,7 @@ Money Contract::insured()
     return m_insured;
 }
 
-std::string Contract::name() const
+std::wstring Contract::name() const
 {
     return m_name;
 }
@@ -74,7 +74,7 @@ void Contract::set_insured(const Money sum)
     m_insured = sum;
 }
 
-void Contract::set_name(const std::string name)
+void Contract::set_name(const std::wstring name)
 {
     m_name = name;
 }

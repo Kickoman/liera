@@ -10,7 +10,7 @@ public:
     Object();
     virtual ~Object();
 
-    virtual std::string render();
+    virtual std::wstring render();
     virtual void interact(int);
 
     bool hidden;

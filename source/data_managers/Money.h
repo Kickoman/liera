@@ -13,7 +13,7 @@ public:
 
     double toDouble() const;
     long long value() const;
-    std::string str() const;
+    std::wstring str() const;
 
     Money& operator+=(const Money& rhs);
     Money& operator-=(const Money& rhs);

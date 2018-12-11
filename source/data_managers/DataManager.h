@@ -58,12 +58,15 @@ public:
 
             filer.read(name, name_len);
 
+            std::string narrowName(name);
+            std::wstring wideName(narrowName.begin(), narrowName.end());
+
             filer.read((char*)&tariff_rate, sizeof(int));
             filer.read((char*)&office_id, sizeof(int));
             filer.read((char*)&insurance_type, sizeof(int));
             filer.read((char*)&pages_number, sizeof(int));
 
-            Contract c(id, datetime, insured, name, tariff_rate, office_id, insurance_type, pages_number);
+            Contract c(id, datetime, insured, wideName, tariff_rate, office_id, insurance_type, pages_number);
             m_data.push_back(c);
         }
 
@@ -88,9 +91,9 @@ public:
             unsigned id = m_data[i].id();
             Datetime datetime = m_data[i].datetime();
             Money insured = m_data[i].insured();
-            size_t name_len = strlen(m_data[i].name().c_str()) + 1;
-            char* name = new char[name_len];
-            strcpy_s(name, name_len, m_data[i].name().c_str());
+            size_t name_len = wcslen(m_data[i].name().c_str()) + 1;
+            wchar_t* name = new wchar_t[name_len];
+            wcscpy_s(name, name_len, m_data[i].name().c_str());
 
             int tariff_rate = m_data[i].tariff_rate();
             int office_id = m_data[i].office_id();
@@ -101,7 +104,7 @@ public:
             filew.write((char*)&datetime, sizeof(datetime));
             filew.write((char*)&insured, sizeof(insured));
             filew.write((char*)&name_len, sizeof(name_len));
-            filew.write(name, name_len);
+            filew.write((char*) name, sizeof(wchar_t) * name_len);
 
             filew.write((char*)&tariff_rate, sizeof(int));
             filew.write((char*)&office_id, sizeof(int));

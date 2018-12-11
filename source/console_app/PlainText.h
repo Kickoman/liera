@@ -6,14 +6,14 @@ class PlainText :
     public Object
 {
 protected:
-    std::string value;
+    std::wstring value;
 public:
     PlainText();
-    PlainText(const std::string&);
+    PlainText(const std::wstring&);
     virtual ~PlainText();
 
-    virtual std::string render();
+    virtual std::wstring render();
 
-    void setValue(const std::string&);
+    void setValue(const std::wstring&);
 };
 

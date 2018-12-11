@@ -87,6 +87,9 @@
     <ClCompile Include="..\..\..\source\layouts\FullList.cpp">
       <Filter>Source Files\layouts</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\layouts\ContractDetails.cpp">
+      <Filter>Source Files\layouts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\console_app\Application.h">
@@ -145,6 +148,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\source\console_app\key_defines.h">
       <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\layouts\ContractDetails.h">
+      <Filter>Header Files\layouts</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

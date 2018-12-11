@@ -6,7 +6,7 @@ class MenuPosition :
 {
 public:
     MenuPosition();
-    MenuPosition(const std::string& v) :PlainText(v) {}
+    MenuPosition(const std::wstring& v) :PlainText(v) {}
     virtual ~MenuPosition();
 
     // signals

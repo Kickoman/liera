@@ -3,6 +3,7 @@
 // temp
 #include "ModalDialog.h"
 
+
 InsuranceKeeper::InsuranceKeeper()
 {
     // source managing
@@ -14,6 +15,7 @@ InsuranceKeeper::InsuranceKeeper()
     // Layouts generating
     mainMenu = new MainMenu(this);
     fullList = new FullList(this, &data);
+    contractDetails = new ContractDetails(this);
 
     controller->setLayout(mainMenu);
 

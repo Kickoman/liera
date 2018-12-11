@@ -22,9 +22,9 @@ void ContractView::setManager(DataManager* dm)
     m_data_manager = dm;
 }
 
-string ContractView::render()
+wstring ContractView::render()
 {
-    std::string result;
+    std::wstring result;
     result = (*m_data_manager)[m_contract_index].render();
     return result;
     /*Contract* c = &(*m_data_manager)[m_contract_index];

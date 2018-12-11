@@ -4,6 +4,8 @@
 #include <Windows.h>
 #include <conio.h>
 #include <stack>
+#include <fcntl.h>
+#include <io.h>
 
 class Application;
 

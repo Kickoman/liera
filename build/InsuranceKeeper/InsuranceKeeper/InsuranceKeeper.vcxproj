@@ -132,6 +132,7 @@
     <ClCompile Include="..\..\..\source\data_managers\Datetime.cpp" />
     <ClCompile Include="..\..\..\source\data_managers\Money.cpp" />
     <ClCompile Include="..\..\..\source\InsuranceKeeper.cpp" />
+    <ClCompile Include="..\..\..\source\layouts\ContractDetails.cpp" />
     <ClCompile Include="..\..\..\source\layouts\FullList.cpp" />
     <ClCompile Include="..\..\..\source\layouts\MainMenu.cpp" />
     <ClCompile Include="..\..\..\source\main.cpp" />
@@ -154,6 +155,7 @@
     <ClInclude Include="..\..\..\source\data_managers\Datetime.h" />
     <ClInclude Include="..\..\..\source\data_managers\Money.h" />
     <ClInclude Include="..\..\..\source\InsuranceKeeper.h" />
+    <ClInclude Include="..\..\..\source\layouts\ContractDetails.h" />
     <ClInclude Include="..\..\..\source\layouts\FullList.h" />
     <ClInclude Include="..\..\..\source\layouts\MainMenu.h" />
   </ItemGroup>

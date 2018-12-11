@@ -25,11 +25,11 @@ long long Money::value() const
     return m_value;
 }
 
-std::string Money::str() const
+std::wstring Money::str() const
 {
     int integer = m_value / cent_factor;
     int fraction = m_value % cent_factor;
-    return std::to_string(integer) + "." + std::to_string(fraction);
+    return std::to_wstring(integer) + L"." + std::to_wstring(fraction);
 }
 
 Money& Money::operator+=(const Money& rhs)

@@ -5,9 +5,13 @@
 UIController::UIController()
 {
     //std::ios_base::sync_with_stdio(0);
+    _setmode(_fileno(stdout), _O_U8TEXT);
 }
 
-UIController::UIController(Application* app) :master_app(app) {}
+UIController::UIController(Application* app) :UIController()
+{
+    master_app = app;
+}
 
 
 UIController::~UIController()
@@ -16,7 +20,10 @@ UIController::~UIController()
 
 void UIController::render()
 {
-    std::cout << layout->render();
+    //wprintf(L"%s", layout->render().c_str());
+    _putws(layout->render().c_str());
+    //std::wstring res = layout->render();
+    //std::wcout << res;
 }
 
 void UIController::interact()

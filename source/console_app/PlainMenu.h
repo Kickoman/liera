@@ -7,8 +7,8 @@ class PlainMenu :
     public Object
 {
 protected:
-    const std::string SELECTOR = "--> ";
-    const std::string FILLER   = "    ";
+    const std::wstring SELECTOR = L"--> ";
+    const std::wstring FILLER   = L"    ";
 
     std::vector<MenuPosition> m_elements;
     unsigned m_selected;
@@ -19,7 +19,7 @@ public:
     PlainMenu();
     virtual ~PlainMenu();
 
-    virtual std::string render();
+    virtual std::wstring render();
     virtual void interact(int);
 
     virtual void insertPosition(MenuPosition);

@@ -3,6 +3,8 @@
 #include <string>
 #include "Object.h"
 
+#include "key_defines.h"
+
 class UIController;
 
 class Layout
@@ -20,11 +22,14 @@ public:
     Layout();
     virtual ~Layout();
 
-    virtual std::string render();
+    virtual std::wstring render();
 
     void addObject(Object*, bool is_main = false);
     
     virtual void interact(int code);
+
+    Object* operator[](int) const;
+    Object* operator[](int);
 
     // setters
     void setSize(const unsigned height, const unsigned width);

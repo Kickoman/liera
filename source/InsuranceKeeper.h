@@ -3,17 +3,17 @@
 #include "DataManager.h"
 #include "MainMenu.h"
 #include "FullList.h"
-
+#include "ContractDetails.h"
 
 class InsuranceKeeper :
     public Application
 {
 public:
     // Layouts
-    Layout* mainMenu;
+    MainMenu* mainMenu;
     Layout* authorization;
-    Layout* fullList;
-    Layout* contractView;
+    FullList* fullList;
+    ContractDetails* contractDetails;
 
     DataManager data;
 public:

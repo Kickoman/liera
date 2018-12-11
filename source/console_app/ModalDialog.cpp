@@ -20,12 +20,12 @@ ModalDialog::~ModalDialog()
 }
 
 
-void ModalDialog::addOption(std::string name, int code)
+void ModalDialog::addOption(std::wstring name, int code)
 {
     m_menu->insertPosition(MenuPosition(name));
 }
 
-void ModalDialog::setText(std::string question)
+void ModalDialog::setText(std::wstring question)
 {
     m_title->setValue(question);
 }

@@ -22,15 +22,16 @@ void Datetime::set_current()
     m_time = time(0);
 }
 
-std::string Datetime::localstr() const
+std::wstring Datetime::localstr() const
 {
     tm localtm;
     localtime_s(&localtm, &m_time);
 
     char str[50];
     asctime_s(str, sizeof str, &localtm);
-    std::string result(str);
-    if (result.back() == '\n') result.pop_back();
+    std::string narrowStr(str);
+    std::wstring result(narrowStr.begin(), narrowStr.end());
+    if (result.back() == L'\n') result.pop_back();
     return result;
 }
 

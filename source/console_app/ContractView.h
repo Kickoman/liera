@@ -17,7 +17,7 @@ public:
 
     virtual ~ContractView();
 
-    virtual std::string render();
+    virtual std::wstring render();
 
     void setManager(DataManager*);
     void setIndex(unsigned);

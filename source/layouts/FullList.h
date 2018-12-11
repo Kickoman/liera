@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 #include "Layout.h"
 #include "ListView.h"
 #include "PlainText.h"
@@ -10,6 +9,7 @@ class FullList :
     public Layout
 {
 protected:
+
     PlainText* m_title;
     ListView* m_list;
 

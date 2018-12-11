@@ -6,19 +6,19 @@ PlainText::PlainText()
 {
 }
 
-PlainText::PlainText(const std::string& val) :value(val) {}
+PlainText::PlainText(const std::wstring& val) :value(val) {}
 
 PlainText::~PlainText()
 {
 }
 
 
-std::string PlainText::render()
+std::wstring PlainText::render()
 {
     return value;
 }
 
-void PlainText::setValue(const std::string& val)
+void PlainText::setValue(const std::wstring& val)
 {
     value = val;
 }

@@ -11,13 +11,13 @@ PlainMenu::~PlainMenu()
 }
 
 
-std::string PlainMenu::render()
+std::wstring PlainMenu::render()
 {
-    std::string result;
+    std::wstring result;
     for (size_t i = 0; i < m_elements.size(); ++i)
     {
         result += (i == m_selected ? SELECTOR : FILLER);
-        result += m_elements[i].render() + "\n";
+        result += m_elements[i].render() + L"\n";
     }
     return result;
 }

@@ -15,13 +15,13 @@ Layout::~Layout()
     m_objects.clear();
 }
 
-std::string Layout::render()
+std::wstring Layout::render()
 {
-    std::string result;
+    std::wstring result;
     for (auto obj : m_objects)
     {
         if (obj->hidden) continue;
-        result += obj->render() + "\n";
+        result += obj->render() + L"\n";
     }
     return result;
 }
@@ -38,6 +38,18 @@ void Layout::interact(int code)
     // TODO: main object support 
     m_objects[m_main_object]->interact(code);
 }
+
+
+Object* Layout::operator[](int index) const
+{
+    return m_objects[index];
+}
+
+Object* Layout::operator[](int index)
+{
+    return m_objects[index];
+}
+
 
 void Layout::setSize(const unsigned height, const unsigned width)
 {

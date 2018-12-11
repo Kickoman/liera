@@ -11,7 +11,7 @@ public:
     virtual ~Datetime();
 
     void set_current();
-    std::string localstr() const;
+    std::wstring localstr() const;
 
     friend bool operator< (const Datetime& lhs, const Datetime& rhs);// { return m_value < rhs.m_value; }
     friend bool operator> (const Datetime& lhs, const Datetime& rhs);// { return rhs < *this; }

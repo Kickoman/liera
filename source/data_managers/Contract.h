@@ -11,7 +11,7 @@ protected:
     Datetime m_datetime;
     Money m_insured;
 
-    std::string m_name; // имя подписанта
+    std::wstring m_name; // имя подписанта
 
     int m_tariff_rate;
     int m_office_id;
@@ -24,7 +24,7 @@ public:
         unsigned id,
         Datetime datetime,
         Money insured,
-        char* name,
+        std::wstring name,
         int tariff_rate,
         int office_id,
         int insurance_type,
@@ -41,13 +41,13 @@ public:
     Contract(int);
     virtual ~Contract();
 
-    std::string render() const;
+    std::wstring render() const;
 
     //getters
     unsigned id() const;
     Datetime datetime();
     Money insured();
-    std::string name() const;
+    std::wstring name() const;
     int tariff_rate() const;
     int office_id() const;
     int insurance_type() const;
@@ -56,7 +56,7 @@ public:
     //setters
     void set_datetime(const Datetime time);
     void set_insured(const Money sum);
-    void set_name(const std::string name);
+    void set_name(const std::wstring name);
     void set_tariff(const int rate);
     void set_office(const int id);
     void set_type(const int type);
