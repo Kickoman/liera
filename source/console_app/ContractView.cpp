@@ -35,3 +35,7 @@ wstring ContractView::render()
     result += */
 }
 
+unsigned ContractView::index() const
+{
+    return m_contract_index;
+}

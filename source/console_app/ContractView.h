@@ -21,5 +21,8 @@ public:
 
     void setManager(DataManager*);
     void setIndex(unsigned);
+
+    // getters
+    unsigned index() const;
 };
 

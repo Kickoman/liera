@@ -8,10 +8,14 @@ class ListView :
 {
 protected:
     DataManager* m_data;
+    unsigned m_last_changed;
 public:
     ListView();
     virtual ~ListView();
 
+    virtual std::wstring render();
+
+    void rebuild();
     void setData(DataManager*);
 };
 

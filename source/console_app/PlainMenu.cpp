@@ -55,3 +55,10 @@ void PlainMenu::selector_move_down()
 {
     m_selected = (m_selected + 1) % m_elements.size();
 }
+
+
+void PlainMenu::clear()
+{
+    m_selected = 0;
+    m_elements.clear();
+}

@@ -24,7 +24,7 @@ InsuranceKeeper::InsuranceKeeper()
 
 InsuranceKeeper::~InsuranceKeeper()
 {
-
+    data.saveData();
 }
 
 

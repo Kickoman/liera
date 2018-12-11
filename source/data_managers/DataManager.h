@@ -13,8 +13,10 @@ class DataManager
 protected:
     string m_source_file;
     vector<Contract> m_data;
+
+    unsigned m_last_changed;
 public:
-    DataManager() {}
+    DataManager() : m_last_changed(0) {}
     virtual ~DataManager() {}
 
     int setSource(const string& filename)
@@ -49,9 +51,9 @@ public:
             int insurance_type;
             int pages_number;
 
-            filer.read((char*)&id, sizeof(int));
+            filer.read((char*)&id,       sizeof(int));
             filer.read((char*)&datetime, sizeof(Datetime));
-            filer.read((char*)&insured, sizeof(Money));
+            filer.read((char*)&insured,  sizeof(Money));
             filer.read((char*)&name_len, sizeof(size_t));
 
             name = new char[name_len];
@@ -133,5 +135,21 @@ public:
     Contract& operator[](int index)
     {
         return m_data[index];
+    }
+
+    void remove(unsigned index)
+    {
+        if (index >= m_data.size()) return;
+
+        for (size_t i = index; i < m_data.size() - 1; ++i)
+            swap(m_data[i], m_data[i + 1]);
+
+        m_data.pop_back();
+        m_last_changed++;
+    }
+
+    unsigned lastChanged() const
+    {
+        return m_last_changed;
     }
 };

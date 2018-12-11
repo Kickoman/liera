@@ -18,7 +18,7 @@ public:
     ModalDialog(UIController* m);
     virtual ~ModalDialog();
 
-    virtual void addOption(std::wstring, int);
+    virtual void addOption(std::wstring, int x = 0);
     virtual void setText(std::wstring);
     virtual int exec();
 };

@@ -24,6 +24,8 @@ public:
 
     virtual void insertPosition(MenuPosition);
 
+    virtual void clear();
+
     // signals
     Signal<int> pressed;
 };

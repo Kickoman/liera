@@ -1,5 +1,6 @@
 ﻿#include "ContractDetails.h"
 #include "InsuranceKeeper.h"
+#include "ModalDialog.h"
 
 ContractDetails::ContractDetails(InsuranceKeeper* ma) :master_app(ma)
 {
@@ -60,6 +61,24 @@ void ContractDetails::on_menu_pressed(int index)
         break;
     case 1:
         // delete
+        on_remove_pressed();
         break;
+    }
+}
+
+
+void ContractDetails::on_remove_pressed()
+{
+    ModalDialog confirm;
+    confirm.setText(L"Вы уверены, что хотите удалить этот контракт?");
+    confirm.addOption(L"Отмена");
+    confirm.addOption(L"Удалить");
+
+    int response = confirm.exec();
+    
+    if (response == 1)
+    {
+        master_app->data.remove(m_contract->index());
+        m_master_controller->setLayout(m_prev_layout);
     }
 }
