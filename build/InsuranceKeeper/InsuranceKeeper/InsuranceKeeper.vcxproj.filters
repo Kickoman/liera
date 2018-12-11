@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\console_app">
+      <UniqueIdentifier>{05419450-dfce-4b0d-bc07-26ddd5c8d1c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\data_managers">
+      <UniqueIdentifier>{69dd9372-df71-4245-bf5a-31cd3f15fd1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\console_app">
+      <UniqueIdentifier>{8b882797-4d01-4f33-8c67-ca2554b430e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\data_managers">
+      <UniqueIdentifier>{35774599-a7d1-4b3e-ba4d-930aebaeaed7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\layouts">
+      <UniqueIdentifier>{c5ee12e8-cd65-4d30-949b-9d8e5e6f2b43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\layouts">
+      <UniqueIdentifier>{25b92e2d-f19c-4981-841b-4b467bb9c429}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\console_app\Application.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\console_app\ContractView.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\console_app\Layout.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\console_app\ListView.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\console_app\MenuPosition.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\console_app\ModalDialog.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\console_app\Object.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\console_app\PlainMenu.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\console_app\PlainText.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\console_app\UIController.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\data_managers\Contract.cpp">
+      <Filter>Source Files\data_managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\data_managers\DataManager.cpp">
+      <Filter>Source Files\data_managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\data_managers\Datetime.cpp">
+      <Filter>Source Files\data_managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\data_managers\Money.cpp">
+      <Filter>Source Files\data_managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\InsuranceKeeper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\layouts\MainMenu.cpp">
+      <Filter>Source Files\layouts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\layouts\FullList.cpp">
+      <Filter>Source Files\layouts</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\console_app\Application.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\ContractView.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\Layout.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\ListView.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\MenuPosition.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\ModalDialog.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\Object.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\PlainMenu.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\PlainText.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\Signal.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\UIController.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\data_managers\Contract.h">
+      <Filter>Header Files\data_managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\data_managers\DataManager.h">
+      <Filter>Header Files\data_managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\data_managers\Datetime.h">
+      <Filter>Header Files\data_managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\data_managers\Money.h">
+      <Filter>Header Files\data_managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\InsuranceKeeper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\layouts\MainMenu.h">
+      <Filter>Header Files\layouts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\layouts\FullList.h">
+      <Filter>Header Files\layouts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\key_defines.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

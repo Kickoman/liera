@@ -1,0 +1,27 @@
+#pragma once
+#include <string>
+
+class Money
+{
+protected:
+    int cent_factor = 100;
+    long long m_value = 0;
+public:
+    Money();
+    Money(double);
+    virtual ~Money();
+
+    double toDouble() const;
+    long long value() const;
+    std::string str() const;
+
+    Money& operator+=(const Money& rhs);
+    Money& operator-=(const Money& rhs);
+    friend Money operator+(Money lhs, const Money& rhs);
+    friend Money operator-(Money lhs, const Money& rhs);
+
+    friend bool operator< (const Money& lhs, const Money& rhs);// { return m_value < rhs.m_value; }
+    friend bool operator> (const Money& lhs, const Money& rhs);// { return rhs < *this; }
+    friend bool operator<=(const Money& lhs, const Money& rhs);// { return !(*this > rhs); }
+    friend bool operator>=(const Money& lhs, const Money& rhs);// { return !(*this < rhs); }
+};
