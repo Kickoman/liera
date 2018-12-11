@@ -35,7 +35,7 @@ public:
 
         size_t bufferSize = 0;
         filer.read((char*)&bufferSize, sizeof(size_t));
-        
+
         m_data.clear();
 
         for (size_t i = 0; i < bufferSize; ++i)
@@ -44,24 +44,25 @@ public:
             Datetime datetime;
             Money insured;
             size_t name_len;
-            char* name;
+            wchar_t* name;
 
             int tariff_rate;
             int office_id;
             int insurance_type;
             int pages_number;
 
-            filer.read((char*)&id,       sizeof(int));
+            filer.read((char*)&id, sizeof(int));
             filer.read((char*)&datetime, sizeof(Datetime));
-            filer.read((char*)&insured,  sizeof(Money));
+            filer.read((char*)&insured, sizeof(Money));
             filer.read((char*)&name_len, sizeof(size_t));
 
-            name = new char[name_len];
+            name = new wchar_t[name_len];
 
-            filer.read(name, name_len);
+            filer.read((char*)name, name_len * sizeof(wchar_t));
 
-            std::string narrowName(name);
-            std::wstring wideName(narrowName.begin(), narrowName.end());
+            //std::string narrowName(name);
+            //std::wstring wideName(narrowName.begin(), narrowName.end());
+            std::wstring wideName(name);
 
             filer.read((char*)&tariff_rate, sizeof(int));
             filer.read((char*)&office_id, sizeof(int));
@@ -92,8 +93,9 @@ public:
         {
             unsigned id = m_data[i].id();
             Datetime datetime = m_data[i].datetime();
-            Money insured = m_data[i].insured();
-            size_t name_len = wcslen(m_data[i].name().c_str()) + 1;
+            Money    insured = m_data[i].insured();
+            size_t   name_len = wcslen(m_data[i].name().c_str()) + 1;
+
             wchar_t* name = new wchar_t[name_len];
             wcscpy_s(name, name_len, m_data[i].name().c_str());
 
@@ -106,7 +108,7 @@ public:
             filew.write((char*)&datetime, sizeof(datetime));
             filew.write((char*)&insured, sizeof(insured));
             filew.write((char*)&name_len, sizeof(name_len));
-            filew.write((char*) name, sizeof(wchar_t) * name_len);
+            filew.write((char*)name, sizeof(wchar_t) * name_len);
 
             filew.write((char*)&tariff_rate, sizeof(int));
             filew.write((char*)&office_id, sizeof(int));
