@@ -4,7 +4,7 @@
 
 ContractDetails::ContractDetails(InsuranceKeeper* ma) :master_app(ma)
 {
-    m_title = new PlainText(L"Подробности о контракте");
+    m_title = new PlainText(L"Подробности о контракте\n");
 
     m_menu = new PlainMenu();
     m_menu->insertPosition(MenuPosition(L"Изменить"));

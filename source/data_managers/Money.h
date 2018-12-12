@@ -9,6 +9,7 @@ protected:
 public:
     Money();
     Money(double);
+    Money(std::wstring);
     virtual ~Money();
 
     double toDouble() const;

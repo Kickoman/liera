@@ -4,6 +4,7 @@
 InputField::InputField()
 {
     m_password = false;
+    m_active = false;
 }
 
 

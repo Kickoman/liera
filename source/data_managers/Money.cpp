@@ -11,6 +11,16 @@ Money::Money(double x)
     m_value = int(roundf(x * 100));
 }
 
+Money::Money(std::wstring s)
+{
+    double res = 0;
+    try {
+        res = std::stod(s);
+    }
+    catch (...) {}
+    *this = res;
+}
+
 Money::~Money()
 {
 }

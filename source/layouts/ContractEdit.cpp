@@ -3,7 +3,12 @@
 
 ContractEdit::ContractEdit(InsuranceKeeper* ma):master_app(ma)
 {
-    m_title = new PlainText(L"Редактирование контракта");
+    m_title = new PlainText(
+        L"Редактирование контракта\n"
+        L"Для перемещения между полями используйте клавиши со стрелками\n"
+        L"Для сохранения нажмите Enter\n"
+        L"Для отмены нажмите Esc\n"
+    );
 
     m_name = new InputField();
     m_insured = new InputField();
@@ -101,9 +106,34 @@ void ContractEdit::save_data()
     if (m_index < m_data->size())
     {
         (*m_data)[m_index].set_name(m_name->value());
+        (*m_data)[m_index].set_datetime(Datetime(0));
+        (*m_data)[m_index].set_insured(m_insured->value());
+        (*m_data)[m_index].set_office(
+            std::stoi(m_office_id->value())
+        );
+        (*m_data)[m_index].set_tariff(
+            std::stoi(m_tariff_rate->value())
+        );
+        (*m_data)[m_index].set_type(
+            std::stoi(m_insurance_type->value())
+        );
     } else {
-        Contract c;
+        int lastId = 0;
+        if (m_data->size() > 0)
+            lastId = (*m_data)[m_data->size() - 1].id() + 1;
+        Contract c(lastId);
         c.set_name(m_name->value());
+        c.set_datetime(Datetime(0));
+        c.set_insured(m_insured->value());
+        c.set_office(
+            std::stoi(m_office_id->value())
+        );
+        c.set_tariff(
+            std::stoi(m_tariff_rate->value())
+        );
+        c.set_type(
+            std::stoi(m_insurance_type->value())
+        );
         m_data->append_data(c);
     }
     m_data->incLastChanged();

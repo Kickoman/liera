@@ -17,7 +17,7 @@ std::wstring Contract::render() const
 {
     std::wstring result;
     result  = L"ID:                 " + std::to_wstring(m_id) + L"\n";
-    result += L"Имя подписанта:     " + m_name + L"\n";
+    result += L"Имя клиента   :     " + m_name + L"\n";
     result += L"Сумма страхования:  " + m_insured.str() + L"\n";
     result += L"Дата:               " + m_datetime.localstr() + L"\n";
     result += L"Тарифная ставка:    " + std::to_wstring(m_tariff_rate) + L"\n";
