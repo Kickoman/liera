@@ -29,7 +29,7 @@ void UIController::render()
 void UIController::interact()
 {
     // nothing!
-    int c = _getch();
+    int c = _getwch();
     layout->interact(c);
 }
 

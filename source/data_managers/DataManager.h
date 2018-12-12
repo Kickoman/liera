@@ -147,8 +147,18 @@ public:
         m_last_changed++;
     }
 
+    void incLastChanged()
+    {
+        m_last_changed++;
+    }
+
     unsigned lastChanged() const
     {
         return m_last_changed;
+    }
+
+    void append_data(Contract c)
+    {
+        m_data.push_back(c);
     }
 };

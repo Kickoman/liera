@@ -16,6 +16,7 @@ InsuranceKeeper::InsuranceKeeper()
     mainMenu = new MainMenu(this);
     fullList = new FullList(this, &data);
     contractDetails = new ContractDetails(this);
+    contractEdit = new ContractEdit(this);
 
     controller->setLayout(mainMenu);
 

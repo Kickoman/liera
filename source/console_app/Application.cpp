@@ -31,9 +31,9 @@ int Application::run()
 
     while (statuscode == PROCEED)
     {
+        controller->clr_scr();
         controller->render();
         controller->interact();
-        controller->clr_scr();
     }
 
     return statuscode;

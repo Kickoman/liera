@@ -74,7 +74,10 @@ void Layout::setMaster(UIController* controller)
 
 void Layout::setMain(const unsigned index)
 {
+    if (index < m_objects.size()) 
+        m_objects[m_main_object]->disable();
     m_main_object = index;
+    m_objects[m_main_object]->enable();
 }
 
 const unsigned Layout::width() const

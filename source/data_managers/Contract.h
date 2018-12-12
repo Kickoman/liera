@@ -16,7 +16,7 @@ protected:
     int m_tariff_rate;
     int m_office_id;
     int m_insurance_type;
-    int m_pages_number;
+    int m_pages_number; // deprecated
 
 public:
     Contract(); 

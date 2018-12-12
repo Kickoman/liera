@@ -119,6 +119,8 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\source\console_app\Application.cpp" />
     <ClCompile Include="..\..\..\source\console_app\ContractView.cpp" />
+    <ClCompile Include="..\..\..\source\console_app\InputField.cpp" />
+    <ClCompile Include="..\..\..\source\console_app\key_defines.cpp" />
     <ClCompile Include="..\..\..\source\console_app\Layout.cpp" />
     <ClCompile Include="..\..\..\source\console_app\ListView.cpp" />
     <ClCompile Include="..\..\..\source\console_app\MenuPosition.cpp" />
@@ -133,6 +135,7 @@
     <ClCompile Include="..\..\..\source\data_managers\Money.cpp" />
     <ClCompile Include="..\..\..\source\InsuranceKeeper.cpp" />
     <ClCompile Include="..\..\..\source\layouts\ContractDetails.cpp" />
+    <ClCompile Include="..\..\..\source\layouts\ContractEdit.cpp" />
     <ClCompile Include="..\..\..\source\layouts\FullList.cpp" />
     <ClCompile Include="..\..\..\source\layouts\MainMenu.cpp" />
     <ClCompile Include="..\..\..\source\main.cpp" />
@@ -140,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\source\console_app\Application.h" />
     <ClInclude Include="..\..\..\source\console_app\ContractView.h" />
+    <ClInclude Include="..\..\..\source\console_app\InputField.h" />
     <ClInclude Include="..\..\..\source\console_app\key_defines.h" />
     <ClInclude Include="..\..\..\source\console_app\Layout.h" />
     <ClInclude Include="..\..\..\source\console_app\ListView.h" />
@@ -156,6 +160,7 @@
     <ClInclude Include="..\..\..\source\data_managers\Money.h" />
     <ClInclude Include="..\..\..\source\InsuranceKeeper.h" />
     <ClInclude Include="..\..\..\source\layouts\ContractDetails.h" />
+    <ClInclude Include="..\..\..\source\layouts\ContractEdit.h" />
     <ClInclude Include="..\..\..\source\layouts\FullList.h" />
     <ClInclude Include="..\..\..\source\layouts\MainMenu.h" />
   </ItemGroup>

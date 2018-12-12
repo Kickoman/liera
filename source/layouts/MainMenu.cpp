@@ -17,6 +17,11 @@ MainMenu::MainMenu(InsuranceKeeper* ma):master_app(ma)
     addObject(m_menu, true);
 
     m_menu->pressed.connect_member(this, &MainMenu::on_menu_pressed);
+
+    // tmp
+    //inputField = new InputField();
+    //inputField->setHint(L"Hint, little");
+    //addObject(inputField, true);
 }
 
 
@@ -40,6 +45,12 @@ void MainMenu::on_menu_pressed(int index)
             break;
         case 2:
             // Add contract
+            master_app->contractEdit->setContractData(
+                &master_app->data,
+                master_app->data.size() + 1
+            );
+            master_app->contractEdit->setPrevLayout(this);
+            m_master_controller->setLayout(master_app->contractEdit);
             break;
         case 3:
             // Quit

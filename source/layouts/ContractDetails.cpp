@@ -58,6 +58,7 @@ void ContractDetails::on_menu_pressed(int index)
     {
     case 0:
         // edit
+        on_edit_pressed();
         break;
     case 1:
         // delete
@@ -75,10 +76,19 @@ void ContractDetails::on_remove_pressed()
     confirm.addOption(L"Удалить");
 
     int response = confirm.exec();
-    
+
     if (response == 1)
     {
         master_app->data.remove(m_contract->index());
         m_master_controller->setLayout(m_prev_layout);
     }
+}
+
+void ContractDetails::on_edit_pressed()
+{
+    master_app->contractEdit->setContractData(
+        &master_app->data,
+        m_contract->index());
+    master_app->contractEdit->setPrevLayout(this);
+    m_master_controller->setLayout(master_app->contractEdit);
 }

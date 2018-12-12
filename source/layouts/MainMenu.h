@@ -3,6 +3,9 @@
 #include "PlainMenu.h"
 #include "PlainText.h"
 
+// tmp
+#include "InputField.h"
+
 class InsuranceKeeper;
 
 class MainMenu :
@@ -13,6 +16,9 @@ protected:
     PlainMenu* m_menu;
 
     InsuranceKeeper* master_app;
+
+    // tmp
+    InputField* inputField;
 public:
     MainMenu(InsuranceKeeper* ma);
     virtual ~MainMenu();

@@ -4,6 +4,7 @@
 #include "MainMenu.h"
 #include "FullList.h"
 #include "ContractDetails.h"
+#include "ContractEdit.h"
 
 class InsuranceKeeper :
     public Application
@@ -14,6 +15,7 @@ public:
     Layout* authorization;
     FullList* fullList;
     ContractDetails* contractDetails;
+    ContractEdit* contractEdit;
 
     DataManager data;
 public:

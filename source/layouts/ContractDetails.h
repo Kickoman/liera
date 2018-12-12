@@ -29,4 +29,5 @@ public:
     // slots
     void on_menu_pressed(int);
     void on_remove_pressed();
+    void on_edit_pressed();
 };

@@ -90,6 +90,15 @@
     <ClCompile Include="..\..\..\source\layouts\ContractDetails.cpp">
       <Filter>Source Files\layouts</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\console_app\InputField.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\console_app\key_defines.cpp">
+      <Filter>Source Files\console_app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\layouts\ContractEdit.cpp">
+      <Filter>Source Files\layouts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\console_app\Application.h">
@@ -150,6 +159,12 @@
       <Filter>Header Files\console_app</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\source\layouts\ContractDetails.h">
+      <Filter>Header Files\layouts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\console_app\InputField.h">
+      <Filter>Header Files\console_app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\layouts\ContractEdit.h">
       <Filter>Header Files\layouts</Filter>
     </ClInclude>
   </ItemGroup>
