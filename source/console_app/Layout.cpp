@@ -30,7 +30,7 @@ void Layout::addObject(Object* obj, bool is_main)
 {
     m_objects.push_back(obj);
     if (is_main)
-        m_main_object = m_objects.size() - 1;
+        m_main_object = (unsigned) m_objects.size() - 1;
 }
 
 void Layout::interact(int code)

@@ -8,7 +8,7 @@ Money::Money()
 
 Money::Money(double x)
 {
-    m_value = int(roundf(x * 100));
+    m_value = int(round(x * 100));
 }
 
 Money::Money(std::wstring s)
@@ -37,8 +37,8 @@ long long Money::value() const
 
 std::wstring Money::str() const
 {
-    int integer = m_value / cent_factor;
-    int fraction = m_value % cent_factor;
+    long long integer  = m_value / cent_factor;
+    long long fraction = m_value % cent_factor;
     return std::to_wstring(integer) + L"." + std::to_wstring(fraction);
 }
 

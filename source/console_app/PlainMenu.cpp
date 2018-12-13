@@ -48,7 +48,7 @@ void PlainMenu::selector_move_up()
     if (m_selected > 0)
         m_selected--;
     else
-        m_selected = m_elements.size() - 1;
+        m_selected = (unsigned) m_elements.size() - 1;
 }
 
 void PlainMenu::selector_move_down()

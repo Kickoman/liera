@@ -126,12 +126,12 @@ public:
         return m_data.size();
     }
 
-    Contract operator[](int index) const
+    Contract operator[](size_t index) const
     {
         return m_data[index];
     }
 
-    Contract& operator[](int index)
+    Contract& operator[](size_t index)
     {
         return m_data[index];
     }
