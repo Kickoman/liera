@@ -1,14 +1,19 @@
 #include "InsuranceKeeper.h"
 
-// temp
-#include "ModalDialog.h"
-
-
 InsuranceKeeper::InsuranceKeeper()
 {
     // source managing
     data.setSource("try.bin");
-    data.loadData();
+    try {
+        data.loadData();
+    }
+    catch (...)
+    {
+        // source file is corrupted or does not exists
+        // or it has been created on other CPU with different arch
+        // (re-)creating it
+        data.saveData();
+    }
 
     controller = new UIController(this);
 
