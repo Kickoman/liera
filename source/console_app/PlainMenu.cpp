@@ -1,4 +1,4 @@
-#include "PlainMenu.h"
+﻿#include "PlainMenu.h"
 #include "key_defines.h"
 
 PlainMenu::PlainMenu()
@@ -13,6 +13,11 @@ PlainMenu::~PlainMenu()
 
 std::wstring PlainMenu::render()
 {
+    if (m_elements.size() == 0)
+    {
+        return L"Нет элементов";
+    }
+
     std::wstring result;
     for (size_t i = 0; i < m_elements.size(); ++i)
     {
@@ -45,6 +50,8 @@ void PlainMenu::interact(int code)
 
 void PlainMenu::selector_move_up()
 {
+    if (m_elements.size() == 0) return;
+
     if (m_selected > 0)
         m_selected--;
     else
@@ -53,6 +60,8 @@ void PlainMenu::selector_move_up()
 
 void PlainMenu::selector_move_down()
 {
+    if (m_elements.size() == 0) return;
+
     m_selected = (m_selected + 1) % m_elements.size();
 }
 
