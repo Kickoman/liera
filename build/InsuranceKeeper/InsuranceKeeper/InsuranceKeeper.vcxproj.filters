@@ -31,6 +31,18 @@
     <Filter Include="Source Files\layouts">
       <UniqueIdentifier>{25b92e2d-f19c-4981-841b-4b467bb9c429}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\hashing">
+      <UniqueIdentifier>{55698bb6-5c18-4fda-a006-e6b25516fe6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\users">
+      <UniqueIdentifier>{524e75b6-69e3-44d5-8415-0010ac6242f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hashing">
+      <UniqueIdentifier>{d89db6c9-b655-4758-b03f-7d59b60dda13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\users">
+      <UniqueIdentifier>{44962150-45b2-4819-9c82-0bdbc3182309}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\source\console_app\Application.cpp">
@@ -99,6 +111,18 @@
     <ClCompile Include="..\..\..\source\layouts\ContractEdit.cpp">
       <Filter>Source Files\layouts</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\source\layouts\LoginScreen.cpp">
+      <Filter>Source Files\layouts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\hashing\sha256.cpp">
+      <Filter>Source Files\hashing</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\users\Authorization.cpp">
+      <Filter>Source Files\users</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\users\User.cpp">
+      <Filter>Source Files\users</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\console_app\Application.h">
@@ -166,6 +190,18 @@
     </ClInclude>
     <ClInclude Include="..\..\..\source\layouts\ContractEdit.h">
       <Filter>Header Files\layouts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\layouts\LoginScreen.h">
+      <Filter>Header Files\layouts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\hashing\sha256.h">
+      <Filter>Header Files\hashing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\users\Authorization.h">
+      <Filter>Header Files\users</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\users\User.h">
+      <Filter>Header Files\users</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -15,7 +15,7 @@ public:
     Application(Layout*);
     virtual ~Application();
 
-    int run();
+    virtual int run();
     void quit(int code = 0);
 };
 

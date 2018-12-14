@@ -20,6 +20,7 @@ public:
 
     void setHint(std::wstring);
     std::wstring value();
+    std::string stdValue();
 
     bool isPassword();
     void setPassword(bool);

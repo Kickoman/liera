@@ -5,14 +5,20 @@
 #include "FullList.h"
 #include "ContractDetails.h"
 #include "ContractEdit.h"
+#include "LoginScreen.h"
+#include "Authorization.h"
 
 class InsuranceKeeper :
     public Application
 {
 public:
+    // add authorization
+    Authorization authorization;
+    User user;
+
     // Layouts
+    LoginScreen* loginScreen;
     MainMenu* mainMenu;
-    Layout* authorization;
     FullList* fullList;
     ContractDetails* contractDetails;
     ContractEdit* contractEdit;
@@ -21,6 +27,8 @@ public:
 public:
     InsuranceKeeper();
     virtual ~InsuranceKeeper();
+
+    virtual int run();
 
     // layout makers
     Layout* make_authorization();

@@ -41,6 +41,19 @@ std::wstring InputField::value()
     return m_value;
 }
 
+std::string InputField::stdValue()
+{
+    std::string result;
+    for (auto c : m_value)
+    {
+        if (c < 0 || c > 255)
+            //throw "converting error";
+            return "";
+        result += static_cast<char>(c);
+    }
+    return result;
+}
+
 
 bool InputField::isPassword()
 {

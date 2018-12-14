@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\source\console_app;..\..\..\source\data_managers;..\..\..\source;..\..\..\source\layouts</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\source\console_app;..\..\..\source\data_managers;..\..\..\source;..\..\..\source\layouts;..\..\..\source\hashing;..\..\..\source\users</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -85,7 +85,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\source\console_app;..\..\..\source\data_managers;..\..\..\source;..\..\..\source\layouts</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\source\console_app;..\..\..\source\data_managers;..\..\..\source;..\..\..\source\layouts;..\..\..\source\hashing;..\..\..\source\users</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -96,7 +96,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\source\console_app;..\..\..\source\data_managers;..\..\..\source;..\..\..\source\layouts</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\source\console_app;..\..\..\source\data_managers;..\..\..\source;..\..\..\source\layouts;..\..\..\source\hashing;..\..\..\source\users</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -111,7 +111,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\..\source\console_app;..\..\..\source\data_managers;..\..\..\source;..\..\..\source\layouts</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\source\console_app;..\..\..\source\data_managers;..\..\..\source;..\..\..\source\layouts;..\..\..\source\hashing;..\..\..\source\users</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -135,12 +135,16 @@
     <ClCompile Include="..\..\..\source\data_managers\DataManager.cpp" />
     <ClCompile Include="..\..\..\source\data_managers\Datetime.cpp" />
     <ClCompile Include="..\..\..\source\data_managers\Money.cpp" />
+    <ClCompile Include="..\..\..\source\hashing\sha256.cpp" />
     <ClCompile Include="..\..\..\source\InsuranceKeeper.cpp" />
     <ClCompile Include="..\..\..\source\layouts\ContractDetails.cpp" />
     <ClCompile Include="..\..\..\source\layouts\ContractEdit.cpp" />
     <ClCompile Include="..\..\..\source\layouts\FullList.cpp" />
+    <ClCompile Include="..\..\..\source\layouts\LoginScreen.cpp" />
     <ClCompile Include="..\..\..\source\layouts\MainMenu.cpp" />
     <ClCompile Include="..\..\..\source\main.cpp" />
+    <ClCompile Include="..\..\..\source\users\Authorization.cpp" />
+    <ClCompile Include="..\..\..\source\users\User.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\console_app\Application.h" />
@@ -160,11 +164,15 @@
     <ClInclude Include="..\..\..\source\data_managers\DataManager.h" />
     <ClInclude Include="..\..\..\source\data_managers\Datetime.h" />
     <ClInclude Include="..\..\..\source\data_managers\Money.h" />
+    <ClInclude Include="..\..\..\source\hashing\sha256.h" />
     <ClInclude Include="..\..\..\source\InsuranceKeeper.h" />
     <ClInclude Include="..\..\..\source\layouts\ContractDetails.h" />
     <ClInclude Include="..\..\..\source\layouts\ContractEdit.h" />
     <ClInclude Include="..\..\..\source\layouts\FullList.h" />
+    <ClInclude Include="..\..\..\source\layouts\LoginScreen.h" />
     <ClInclude Include="..\..\..\source\layouts\MainMenu.h" />
+    <ClInclude Include="..\..\..\source\users\Authorization.h" />
+    <ClInclude Include="..\..\..\source\users\User.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
