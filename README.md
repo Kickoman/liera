@@ -1,6 +1,12 @@
 # how to use
 Download full code, open .sln file in Visual Studio.
 
+Default credentials for superadmin (to add new users):
+
+> username: `superadmin`
+>
+> password: `superpassword`
+
 # todo list
 You can find it [here](https://github.com/bsuir-labs/liera/issues), add your propositions if needed.
 
