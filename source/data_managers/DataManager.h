@@ -68,6 +68,8 @@ public:
 
             Contract c(id, datetime, insured, name, tariff_rate, office_id, insurance_type, pages_number);
             m_data.push_back(c);
+
+            delete[] name;
         }
 
         filer.close();
@@ -111,6 +113,8 @@ public:
             filew.write((char*)&office_id, sizeof(int));
             filew.write((char*)&insurance_type, sizeof(int));
             filew.write((char*)&pages_number, sizeof(int));
+
+            delete[] name;
         }
         filew.close();
         return 0;

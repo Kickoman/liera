@@ -125,14 +125,23 @@ void ContractEdit::save_data()
         c.set_name(m_name->value());
         c.set_datetime(Datetime(0));
         c.set_insured(m_insured->value());
+
+
+
         c.set_office(
-            std::stoi(m_office_id->value())
+            isdigit(m_office_id->value()[0]) ?
+            std::stoi(m_office_id->value()) :
+            -1
         );
         c.set_tariff(
-            std::stoi(m_tariff_rate->value())
+            isdigit(m_tariff_rate->value()[0]) ?
+            std::stoi(m_tariff_rate->value()) : 
+            -1
         );
         c.set_type(
-            std::stoi(m_insurance_type->value())
+            isdigit(m_insurance_type->value()[0]) ?
+            std::stoi(m_insurance_type->value()) :
+            -1
         );
         m_data->append_data(c);
     }
