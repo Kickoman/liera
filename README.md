@@ -7,6 +7,8 @@ Default credentials for superadmin (to add new users):
 >
 > password: `superpassword`
 
+Can be changed [here](https://github.com/bsuir-labs/liera/blob/a62076f95f5d8475f90b3424532fdf0cfc394148/source/InsuranceKeeper.cpp#L25)
+
 # todo list
 You can find it [here](https://github.com/bsuir-labs/liera/issues), add your propositions if needed.
 
